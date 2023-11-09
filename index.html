@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD Application</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="formdiv">
+                <h1 class="CRUD">CRUD Application</h1>
+
+                <div class="formbox">
+                    <label class="labl">Name</label> <br>
+                    <input type="text" placeholder="Your name" required
+                        class="name">
+
+                    <label class="labl">Phone Number</label>
+                    <input type="number" placeholder="Your number"
+                        class="phoeno">
+
+                    <label class="labl">Email</label>
+                    <input type="email" placeholder="Your email" class="mailid">
+
+                    <label class="labl">Location</label>
+                    <input type="text" placeholder="Enter locaton"
+                        class="location">
+
+                    <input type="checkbox" class="radiobox">
+                    <label class="agreebox">I agree with user agreement &
+                        privacy policy</label>
+                    <p class="userpara"></p>
+
+                    <button class="submitbtn">Submit</button>
+                </div>
+            </div>
+
+            <div class="datadiv">
+                <h1 class="regdata">Registered Data</h1>
+                <div class="datavisible">
+                    <h2>Name</h2>
+                    <h2>Phone No</h2>
+                    <h2>Email id</h2>
+                    <h2>Location</h2>
+                </div>
+                <!-- <button class="Backbtn">Back</button> -->
+            </div>
+        </div>
+
+        <script>
+    let nametagcalling = document.querySelector(".name")
+    let phonenotagcalling = document.querySelector(".phoeno")
+    let emailtagcalling = document.querySelector(".mailid")
+    let locationtagcalling = document.querySelector(".location")
+    let submitbtntagcalling = document.querySelector(".submitbtn")
+    let formdivcalling = document.querySelector(".formdiv")
+    let datadivcalling = document.querySelector(".datadiv")
+    let backbtn = document.querySelector(".Backbtn")
+    let checkboxcalling = document.querySelector(".radiobox")
+    let paratagcalling  = document.querySelector(".userpara")
+
+    datadivcalling.style.display = "none"
+
+    submitbtntagcalling.addEventListener("click",() =>{
+        datadivcalling.style.display = "block"
+        alert("Details Added")
+        if ( ! checkboxcalling.checked)
+        
+{
+    alert('User agreement is mandatory.');
+    return false;
+}
+
+        let newdiv = document.createElement("div");
+        datadivcalling.appendChild(newdiv);
+
+    let newnametag = document.createElement("input")
+    newnametag.value = nametagcalling.value
+    newnametag.classList.add("newname")
+    newnametag.setAttribute("readonly", "readonly")
+    newdiv.appendChild(newnametag);
+   
+    
+    let newphonetag = document.createElement("input")
+    newphonetag.value = phonenotagcalling.value
+    newphonetag.classList.add("newphone")
+    newnametag.setAttribute("readonly", "readonly")
+    newdiv.appendChild(newphonetag)
+    
+    let newemailtag = document.createElement("input")
+    newemailtag.value = emailtagcalling.value
+    newemailtag.classList.add("newemail")
+    newemailtag.setAttribute("readonly", "readonly")
+    newdiv.appendChild(newemailtag)
+
+    let newlocationtag = document.createElement("input")
+    newlocationtag.value = locationtagcalling.value
+    newlocationtag.classList.add("newlocation")
+    newlocationtag.setAttribute("readonly", "readonly")
+    newdiv.appendChild(newlocationtag)
+
+    let deletebtn = document.createElement("button")
+    deletebtn.innerHTML = "Delete"
+    deletebtn.classList.add("deletebtn")
+    newdiv.appendChild(deletebtn)
+    deletebtn.addEventListener("click",()=>{
+        alert("Selected Item Will be Deleted")
+        newdiv.style.display ="none";
+    })
+
+    let editbtn = document.createElement("button")
+    editbtn.innerHTML = "Edit"
+    editbtn.classList.add("editbtn")
+    newdiv.appendChild(editbtn)
+    editbtn.addEventListener("click",()=>{
+        alert("Enter your Changes")
+        newnametag.removeAttribute("readonly", "readonly")
+        newnametag.removeAttribute("readonly", "readonly")
+        newemailtag.removeAttribute("readonly", "readonly")
+        newlocationtag.removeAttribute("readonly", "readonly")
+
+    })
+
+
+    let savebtn = document.createElement("button")
+    savebtn.innerHTML = "Save"
+    savebtn.classList.add("savebtn")
+    newdiv.appendChild(savebtn)
+    savebtn.addEventListener("click",()=>{
+    alert("Changes Saved")
+        newnametag.setAttribute("readonly", "readonly")
+        newnametag.setAttribute("readonly", "readonly")
+        newemailtag.setAttribute("readonly", "readonly")
+        newlocationtag.setAttribute("readonly", "readonly")
+    })
+   
+    })
+
+
+</script>
+    </body>
+</html>

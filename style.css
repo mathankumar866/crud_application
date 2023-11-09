@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@300&display=swap');
+
+
+
+
+body {
+  background-color: #1d2630;
+  color: white;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.CRUD {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formbox {
+  width: 380px;
+  height: 470px;
+  border: solid 1px white;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.labl {
+  font-size: 20px;
+  position: relative;
+  top: 15px;
+}
+
+.name,
+.phoeno,
+.mailid,
+.location {
+  padding: 10px;
+  border-radius: 5px;
+  width: 350px;
+  height: 22px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.submitbtn {
+  padding: 10px;
+  border-radius: 5px;
+  width: 380px;
+  margin-top: 20px;
+  background-color: #99e56c;
+  font-size: 20px;
+  border: none;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  transition: .5s;
+  cursor: pointer;
+}
+
+.submitbtn:hover {
+  transform: scale(1.1);
+}
+
+.regdata {
+  font-size: 30px;
+  color: white;
+}
+
+.newname {
+  padding: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.newphone,
+.newemail,
+.newlocation {
+  padding: 10px;
+}
+
+.deletebtn,
+.editbtn,
+.savebtn {
+  padding: 10px;
+  width: 70px;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  border: none;
+  margin-left: 5px;
+}
+
+.deletebtn {
+  background-color: #ff0000;
+}
+
+.editbtn {
+  background-color: #ffff00;
+  color: black;
+}
+
+.savebtn {
+  background-color: #00ff2a;
+  color: black;
+}
+
+.radiobox {
+  margin-top: 25px;
+}
+
+.agreebox {
+  font-size: 16px;
+  color: white;
+}
+
+.datavisible {
+  display: flex;
+  gap: 120px;
+  margin-top: 10px;
+}
+
+.newname,
+.newphone,
+.newemail,
+.newlocation {
+  font-size: 16px;
+  border: 1px solid grey;
+  outline: none;
+}
+
+.datavisible h2 {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.datadiv input {
+  border-radius: 5px;
+  margin: 10px 20px;
+}
+
+.datadiv button {
+  border-radius: 5px;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:500px){
+    .datavisible h2{
+      display: none;
+    }
+}
